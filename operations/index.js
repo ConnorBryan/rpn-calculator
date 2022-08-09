@@ -1,18 +1,14 @@
-import { addition } from "./addition";
-import { subtraction } from "./subtraction";
-import { multiplication } from "./multiplication";
-import { division } from "./division";
+const addition = require("./addition");
+const subtraction = require("./subtraction");
+const multiplication = require("./multiplication");
+const division = require("./division");
 
-const symbolsToOperations = [
-  addition,
-  subtraction,
-  multiplication,
-  division,
-].reduce((prev, next) => {
-  prev[next.symbol] = next.operation;
-  return prev;
-}, {});
+const operations = [addition, subtraction, multiplication, division].reduce(
+  (prev, next) => {
+    prev[next.symbol] = next.operation;
+    return prev;
+  },
+  {}
+);
 
-export function isOperatorSymbol(character) {
-  return Object.keys(symbolsToOperations).includes(character);
-}
+module.exports = operations;

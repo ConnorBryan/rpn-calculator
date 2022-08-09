@@ -8,4 +8,4 @@ const readlineInterface = readline.createInterface({
 const prompt = (query) =>
   new Promise((r) => readlineInterface.question(query, r));
 
-exports.prompt = prompt;
+module.exports = prompt;
