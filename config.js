@@ -1,12 +1,16 @@
-const QUIT_KEY = "q";
+const tokens = {
+  QUIT: "q",
+  LIMITER: " ",
+};
 
-const WELCOME_PROMPT =
-  "Welcome to the RPN calculator.\nEnter numbers or operators ('+', '-', '*', '/'), either one at a time or space-limited (i.e. 5 5 +).";
-
-const EXIT_PROMPT = "Thanks for using the RPN calculator.";
+const prompts = {
+  WELCOME: "Welcome to the RPN calculator.",
+  INSTRUCTIONS:
+    "Enter numbers or operators ('+', '-', '*', '/'), either one at a time or space-limited (i.e. 5 5 +).",
+  EXIT: "Thanks for using the RPN calculator.",
+};
 
 module.exports = {
-  QUIT_KEY,
-  WELCOME_PROMPT,
-  EXIT_PROMPT,
+  tokens,
+  prompts,
 };
