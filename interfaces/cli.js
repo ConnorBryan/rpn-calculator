@@ -15,12 +15,18 @@ const prompts = {
 };
 
 async function cliInterface() {
-  let input = await prompt(prompts.welcome);
+  let response = null;
+  const inputs = [];
 
-  while (input !== tokens.quit) {
-    input = await prompt(prompts.instructions);
+  console.log(prompts.welcome);
 
-    const entries = input.split(tokens.limiter);
+  while (response !== tokens.quit) {
+    response = await prompt(prompts.instructions);
+
+    inputs.push(response);
+
+    const fullInput = inputs.join(tokens.limiter);
+    const entries = fullInput.split(tokens.limiter);
     const { result, errors } = calculate(entries);
 
     if (errors.length === 0) {

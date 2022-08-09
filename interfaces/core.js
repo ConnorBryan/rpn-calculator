@@ -1,4 +1,4 @@
-const { operations } = require("../operations");
+const operations = require("../operations");
 
 /**
  * @desc Core calculator implementation is a stack-based calculation approach.
