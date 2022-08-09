@@ -1,6 +1,6 @@
 const { prompt } = require("./prompt");
 const config = require("./config");
-const { operatorsToOperations, isOperator } = require("./operations");
+const { isOperatorSymbol } = require("./operations");
 
 async function listenForInput() {
   let input = null;
@@ -19,7 +19,7 @@ async function listenForInput() {
       if (!isNaN(parsed)) {
         // Entry was a number, add to stack.
         values.push(parsed);
-      } else if (isOperator(entry)) {
+      } else if (isOperatorSymbol(entry)) {
         if (values.length >= 2) {
           const operandA = values.pop();
           const operandB = values.pop();
