@@ -7,13 +7,15 @@ This project contains a calculator that handles input in Reverse Polish Notation
 ## Instructions
 
 1. Clone the repository to your machine.
-   git clone https://github.com/ConnorBryan/rpn-calculator
+   `git clone https://github.com/ConnorBryan/rpn-calculator`
 
 2. Install the program.
-   npm i
+
+   `npm i`
 
 3. Start the program.
-   npm start
+
+   `npm start`
 
 4. Follow the prompts and get the answers you've been looking for.
 
@@ -25,11 +27,11 @@ The calculator is able to recognize numbers and operators defined in the `operat
 
 ### Directories
 
-| Directory   | Description                                                                                                                                             |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| helpers/    | Contains isolated functionality larger in scope than a single in-file utility function.                                                                 |
-| interfaces/ | Contains a variety of implementations of consumers of the calculator.                                                                                   |
-| operations/ | Each file contains an operation symbol and an operation implementation exported in a common format; directory exports a mapping of symbol to operation. |
+| Directory     | Description                                                                                                                                             |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `helpers/`    | Contains isolated functionality larger in scope than a single in-file utility function.                                                                 |
+| `interfaces/` | Contains a variety of implementations of consumers of the calculator.                                                                                   |
+| `operations/` | Each file contains an operation symbol and an operation implementation exported in a common format; directory exports a mapping of symbol to operation. |
 
 ## Doing It Differently
 
