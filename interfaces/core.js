@@ -35,7 +35,7 @@ function calculate(entries) {
   }
 
   return {
-    result: parseFloat(last(values)),
+    result: errors.length > 0 ? NaN : parseFloat(last(values)),
     errors,
   };
 }
