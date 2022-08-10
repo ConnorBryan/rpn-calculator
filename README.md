@@ -33,6 +33,12 @@ The calculator is able to recognize numbers and operators defined in the `operat
 
 ## Doing It Differently
 
+- TypeScript (which eliminates entire classes of errors from needing to be tested)
+- Publishing as an actual NPM package using rollup
+- CONTRIBUTING.md to list expectations for contributing further
+- Utilize dependency mocking to test `interfaces/cli.js` and future interface additions, as well as any file in the `helpers/` directory.
+- More specific test cases in existing suites to handle a wider variety of conditions.
+
 ## Questions
 
 1. Example 1 does not use floating point notation and displays the result as an integer. Example 2 does use floating point notation even though the inputs wouldn't normally cause that to be the case intuitively.
