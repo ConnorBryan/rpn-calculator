@@ -4,9 +4,10 @@
   "description": "A Reverse Polish Notation Calculator",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "mocha ./**/*.spec.js --reporter spec"
   },
-  "author": "",
+  "author": "Connor Bryan",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.3.6",

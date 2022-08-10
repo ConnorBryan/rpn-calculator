@@ -1,5 +1,5 @@
 const prompt = require("../helpers/prompt");
-const calculate = require("./core");
+const calculate = require("../core");
 
 const tokens = {
   quit: "q",
@@ -8,10 +8,9 @@ const tokens = {
 
 const prompts = {
   welcome: "Welcome to the RPN calculator.",
-  instructions:
-    "Enter numbers or operators ('+', '-', '*', '/'), either one at a time or space-limited (i.e. 5 5 +).",
+  instructions: `Enter numbers or operators ('+', '-', '*', '/'), either one at a time or space-limited (i.e. 5 5 +).\nEnter ${tokens.quit} to quit.\nEntry:\t`,
   exit: "Thanks for using the RPN calculator.",
-  errors: "Calculation attempt resulted in the following errors: ",
+  errors: "Calculation attempt resulted in the following errors: \n",
 };
 
 async function cliInterface() {
@@ -30,13 +29,16 @@ async function cliInterface() {
     const { result, errors } = calculate(entries);
 
     if (errors.length === 0) {
-      console.log(`Total: ${result}`);
+      console.log(`Total: ${result}\n\n`);
     } else {
-      console.log(prompts.errors, errors.join(`\n`));
+      console.log(prompts.errors, errors.join(`\n\t`).replace(/Error: /g, ""));
+      inputs.pop(); // Remove bad input from collection of all inputs.
     }
   }
 
   console.log(prompts.exit);
+
+  process.exit(0);
 }
 
 module.exports = cliInterface;
