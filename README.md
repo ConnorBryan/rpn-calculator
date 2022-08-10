@@ -7,7 +7,7 @@ This project contains a calculator that handles input in Reverse Polish Notation
 ## Instructions
 
 1. Clone the repository to your machine.
-   git clone (repo link)
+   git clone https://github.com/ConnorBryan/rpn-calculator
 
 2. Install the program.
    npm i
@@ -34,6 +34,7 @@ The calculator is able to recognize numbers and operators defined in the `operat
 ## Doing It Differently
 
 - TypeScript (which eliminates entire classes of errors from needing to be tested)
+- If not TypeScript, expanded JSDoc notation
 - Publishing as an actual NPM package using rollup
 - CONTRIBUTING.md to list expectations for contributing further
 - Utilize dependency mocking to test `interfaces/cli.js` and future interface additions, as well as any file in the `helpers/` directory.
